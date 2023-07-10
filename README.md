@@ -1,8 +1,14 @@
 # Proyecto-II-Mecatronica
 
+## Explicación
 
+El proyecto consiste en un sistema de calefacción mediante control en lazo cerrado. Este sistema consta de una fuente de calor, un sensor de temperatura y un ventilador. Una placa Arduino utiliza el sensor de temperatura para medir constantemente la temperatura y ajusta la fuente de calor. El ventilador se encarga de regular la temperatura al disipar el exceso de calor generado.
 
-
+<div>
+<p style = 'text-align:center;'>
+<img src="VistaVerticalHD.jpg" width="400px">
+</p>
+</div>
 
 
 ## Fabricación
@@ -153,10 +159,39 @@ Las conexiones deben quedar de la siguiente forma.
 </p>
 </div>
 
+### Ensamble
+
+Los componentes se disponen de la siguiente forma:
+
+<div>
+<p style = 'text-align:center;'>
+<img src="VistaFrontal.jpg" width="400px">
+</p>
+</div>
+
+<div>
+<p style = 'text-align:center;'>
+<img src="VistaCasa.jpg" width="400px">
+</p>
+</div>
+
+
+<div>
+<p style = 'text-align:center;'>
+<img src="VistaLateral.jpg" width="400px">
+</p>
+</div>
+
+
+<div>
+<p style = 'text-align:center;'>
+<img src="VistaVertical.jpg" width="400px">
+</p>
+</div>
 
 
 
-### Código y programación del Arduino
+## Código y programación del Arduino
 
 El codigo en C++ utilizado fue el siguiente:
   
@@ -164,7 +199,7 @@ El codigo en C++ utilizado fue el siguiente:
 #include <OneWire.h>                
 #include <DallasTemperature.h>
  
-OneWire ourWire(3);                //Se establece el pin 2  como bus OneWire
+OneWire ourWire(3);                //Se establece el pin 3  como bus OneWire
 int pinVent = 8;
 int pinCalef = 9;
 
@@ -220,3 +255,30 @@ if (TempDeseada==temp){
    }
 }
 ```
+Se utilizan las librerías OneWire y DallasTemperature para leer la temperatura de un sensor y controlar dispositivos de ventilación y calefacción en función de la temperatura deseada.
+
+El código parte incluyendo las bibliotecas necesarias: OneWire.h y DallasTemperature.h. Estas bibliotecas permiten la comunicación con el sensor de temperatura y facilitan la lectura de los datos.
+
+De manera posterior, se define el pin 3 como el bus OneWire utilizando OneWire ourWire(3). El bus OneWire es utilizado para la comunicación con el sensor de temperatura.
+
+Luego se definen dos variables pinVent y pinCalef, que representan los pines utilizados para controlar los dispositivos de ventilación y calefacción respectivamente.
+
+A continuación, se define la variable TempDeseada que representa la temperatura deseada. En este caso, se establece en 27.00 grados Celsius.
+
+Después, se crea un objeto DallasTemperature llamado sensors utilizando el bus OneWire definido anteriormente. Este objeto se utilizará para interactuar con el sensor de temperatura.
+
+En la función setup(), se configuran los pines pinVent y pinCalef como salidas utilizando pinMode(). Además, se establece el estado inicial de los pines mediante digitalWrite() para asegurar que los dispositivos de ventilación y calefacción estén apagados inicialmente.
+
+En la función loop(), se envía el comando requestTemperatures() al sensor para solicitar la lectura de la temperatura actual. Luego, se utiliza getTempCByIndex(0) para obtener la temperatura en grados Celsius.
+
+A continuación, se utiliza Serial.print() para mostrar la temperatura actual en el monitor serial.
+
+Luego, se realiza una serie de comprobaciones para controlar los dispositivos de ventilación y calefacción en función de la temperatura deseada y la temperatura actual.
+
+Si la temperatura deseada es menor que la temperatura actual y han pasado al menos 10 segundos (millis() > 10000), se enciende el dispositivo de ventilación (digitalWrite(pinVent, HIGH)) y se apaga el dispositivo de calefacción (digitalWrite(pinCalef, LOW)).
+
+Si la temperatura deseada es mayor que la temperatura actual y han pasado al menos 10 segundos (millis() > 10000), se activa el dispositivo de calefacción durante 10 segundos (while (millis() - $T_{inicial}$ < 10000)) y luego se apaga durante 30 segundos (while (millis() - $T_inicial$ < 30000)).
+
+Si la temperatura deseada es igual a la temperatura actual, se activa un bucle durante 5 segundos (while (millis() - $T_{inicial}$ < 5000)) para asegurar que tanto el dispositivo de calefacción como el de ventilación estén apagados.
+
+El ciclo loop() se repite continuamente, leyendo la temperatura, ajustando los dispositivos de ventilación y calefacción según sea necesario, y mostrando la temperatura en el monitor serial.
