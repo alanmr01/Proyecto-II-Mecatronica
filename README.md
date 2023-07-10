@@ -9,7 +9,7 @@
   
 ### Materiales
 
-Para la fabricación de
+Para la fabricación del proyecto, se utilizaron los siguientes materiales:
 
 
 <div>
