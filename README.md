@@ -14,7 +14,7 @@ Para la fabricación de
 
 <div>
 <p style = 'text-align:center;'>
-<img src="Bloque" width="400px">
+<img src="Bloque.jpg" width="400px">
 </p>
 </div>
 
