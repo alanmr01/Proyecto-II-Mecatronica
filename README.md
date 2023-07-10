@@ -53,7 +53,7 @@ Como placa de desarrollo, se utilizó un Arduino UNO.
 
 <div>
 <p style = 'text-align:center;'>
-<img src="placa_arduino_uno.jpg" width="400px">
+<img src="placa-arduino-uno.jpg" width="400px">
 </p>
 </div>
 
