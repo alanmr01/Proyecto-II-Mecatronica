@@ -65,6 +65,15 @@ Para controlar el sensor de temperatura, se utilizó un potenciometro de 5K Ohm.
 </p>
 </div>
 
+Para la alimentación eléctrica del calefactor y el ventilador, se utiliza una fuente de poder de 60 W de potencia, entregando corriente continua a 12 V.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="product_template_11304.png" width="400px">
+</p>
+</div>
+
+
 Para las conexiones electrónicas, se utilizaron cables Dupont.
 
 <div>
@@ -75,7 +84,7 @@ Para las conexiones electrónicas, se utilizaron cables Dupont.
 
 Para las conexiones eléctricas (de mayor potencia electrica), se utilizó cable electrico domiciliario de sección 1.5mm2.
 
-
+Para asegurar las conexiones mediante soldadura, se utilizaron tubos termoretráctiles en el caso del sensor de temperatura.
 
 ### Estructura 
 
@@ -96,6 +105,53 @@ Se utiliza una estructura impresa en PLA para simular la calefacción de una cas
 
 ### Procedimiento
 
+Dado que los extremos del cable del sensor de temperatura no tienen conexiones Dupont para conectar directamente a Arduino, estos se deben soldar a cables macho-macho.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="Soldadura.jpg" width="400px">
+</p>
+</div>
+
+Utilizando tubos termoretráctiles, se aseguran las soldaduras aislando eléctricamente los cables.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="TubosTermo.jpg" width="400px">
+</p>
+</div>
+
+La conexión a la fuente de poder se hace con un cable de instalación domiciliaria.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="ConexionFuente.jpg" width="400px">
+</p>
+</div>
+
+Se conectan los modulos relé a la fuente de poder y al dispositivo a controlar.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="ConexionCalef.jpg" width="400px">
+</p>
+</div>
+
+Se conecta el sensor de temperatura al potenciometro mediante una protoboard.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="ConexionPotenciometro.jpg" width="400px">
+</p>
+</div>
+
+Las conexiones deben quedar de la siguiente forma.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="ConexionVertical.jpg" width="400px">
+</p>
+</div>
 
 
 
