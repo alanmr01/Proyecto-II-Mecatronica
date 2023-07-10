@@ -42,6 +42,57 @@ Para controlar el encendido y apagado del calefactor y ventilador, se utilizaron
 </p>
 </div>
 
+Como sensor de temperatura, se utilizó un sensor DS18B20.
+<div>
+<p style = 'text-align:center;'>
+<img src="HTB12RHrLmzqK1RjSZFpq6ykSXXaU.jpg" width="400px">
+</p>
+</div>
+
+Como placa de desarrollo, se utilizó un Arduino UNO.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="placa_arduino_uno.jpg" width="400px">
+</p>
+</div>
+
+Para controlar el sensor de temperatura, se utilizó un potenciometro de 5K Ohm.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="potenciometro.jpg" width="400px">
+</p>
+</div>
+
+Para las conexiones electrónicas, se utilizaron cables Dupont.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="DMH20-10.png" width="400px">
+</p>
+</div>
+
+Para las conexiones eléctricas (de mayor potencia electrica), se utilizó cable electrico domiciliario de sección 1.5mm2.
+
+
+
+### Estructura 
+
+Se utiliza una estructura impresa en PLA para simular la calefacción de una casa. Los archivos en .stl se encuentran en este repositorio.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="Casa 1.png" width="400px">
+</p>
+</div>
+
+
+<div>
+<p style = 'text-align:center;'>
+<img src="Casa2.png" width="400px">
+</p>
+</div>
 
 ### Procedimiento
 
