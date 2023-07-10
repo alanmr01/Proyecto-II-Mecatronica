@@ -277,7 +277,7 @@ Luego, se realiza una serie de comprobaciones para controlar los dispositivos de
 
 Si la temperatura deseada es menor que la temperatura actual y han pasado al menos 10 segundos (millis() > 10000), se enciende el dispositivo de ventilación (digitalWrite(pinVent, HIGH)) y se apaga el dispositivo de calefacción (digitalWrite(pinCalef, LOW)).
 
-Si la temperatura deseada es mayor que la temperatura actual y han pasado al menos 10 segundos (millis() > 10000), se activa el dispositivo de calefacción durante 10 segundos (while (millis() - $T_{inicial}$ < 10000)) y luego se apaga durante 30 segundos (while (millis() - $T_inicial$ < 30000)).
+Si la temperatura deseada es mayor que la temperatura actual y han pasado al menos 10 segundos (millis() > 10000), se activa el dispositivo de calefacción durante 10 segundos (while (millis() - $T_{inicial}$ < 10000)) y luego se apaga durante 30 segundos (while (millis() - $T_{inicial}$ < 30000)).
 
 Si la temperatura deseada es igual a la temperatura actual, se activa un bucle durante 5 segundos (while (millis() - $T_{inicial}$ < 5000)) para asegurar que tanto el dispositivo de calefacción como el de ventilación estén apagados.
 
