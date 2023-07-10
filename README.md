@@ -11,10 +11,34 @@
 
 Para la fabricación del proyecto, se utilizaron los siguientes materiales:
 
+Cartucho calefactor de impresora 3D, de potencia 40 W y alimentación 12V.
 
 <div>
 <p style = 'text-align:center;'>
+<img src="Cartucho-calefactor-12V-40W.jpg" width="400px">
+</p>
+</div>
+
+Bloque de aluminio para cartucho calefactor de impresora 3D, para mejorar la disipación de calor y aumentar la velocidad de la calefacción.
+<div>
+<p style = 'text-align:center;'>
 <img src="Bloque.jpg" width="400px">
+</p>
+</div>
+
+Ventilador de 12V, para expulsar el aire caliente y enfriar el sistema.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="429-1.jpg" width="400px">
+</p>
+</div>
+
+Para controlar el encendido y apagado del calefactor y ventilador, se utilizaron 2 módulos relé de 1 canal.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="Rele.jpg" width="400px">
 </p>
 </div>
 
